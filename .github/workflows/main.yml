@@ -20,7 +20,7 @@ jobs:
 
       - name: Determine changed files
         id: changed-files
-        uses: tj-actions/verify-changed-files
+        uses: tj-actions/verify-changed-files@v3
 
       - name: Print changed files
         run: echo "Changed files:${{ steps.changed-files.outputs.files }}"
