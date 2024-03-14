@@ -23,4 +23,5 @@ jobs:
         uses: tj-actions/verify-changed-files@v3
 
       - name: Print changed files
-        run: echo "Changed files:${{ steps.changed-files.outputs.files }}"
+        run: echo "Changed files:${{ steps.changed-files.outputs.all_changed_files }}"
+
