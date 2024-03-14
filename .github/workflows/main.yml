@@ -20,7 +20,7 @@ jobs:
 
       - name: Determine changed files
         id: changed-files
-        uses: juliangruber/changed-files@v1
+        uses: https://github.com/tj-actions/verify-changed-files
 
       - name: Print changed files
         run: echo "Changed files:${{ steps.changed-files.outputs.files }}"
