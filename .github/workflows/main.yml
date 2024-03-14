@@ -1,0 +1,27 @@
+---
+name: Go CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    name: Build and Test
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Determine changed files
+        id: changed-files
+        uses: juliangruber/changed-files@v1
+
+      - name: Print changed files
+        run: echo "Changed files:${{ steps.changed-files.outputs.files }}"
+---
