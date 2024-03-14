@@ -24,4 +24,3 @@ jobs:
 
       - name: Print changed files
         run: echo "Changed files:${{ steps.changed-files.outputs.files }}"
----
